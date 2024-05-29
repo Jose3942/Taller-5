@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="pastel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario de Eventos</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"     rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col">
+    <header class="navbar bg-neutral">
+      <nav class="flex-1">
+        <h1 class="text-2xl text-center text-neutral-content font-semibold">Calendario de Eventos</h1>
+      </nav>
+      <nav class="flex-none flex-wrap gap-5 justify-evenly">
+        <ul class="menu menu-horizontal px-1 gap-5">
+          <li>
+            <button class="btn btn-primary" id="view-year">Vista Anual</button>
+          </li>
+          <li>
+            <button class="btn btn-primary" id="view-month">Vista Mensual</button>
+          </li>
+          <li>
+            <button class="btn btn-primary" id="view-day">Vista Diaria</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container self-center flex flex-col my-5">
+      <section class="hidden grid-cols-4 gap-3 flex-grow" id="calendar-day"></section>
+      <section class="grid grid-cols-7 gap-2 flex-grow" id="calendar-month"></section>
+      <section class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 flex-grow" id="calendar-year"></section>
+    </main>
+
+    <script type="module" src="./Js/script.mjs"></script>
+  </body>
+</html>
